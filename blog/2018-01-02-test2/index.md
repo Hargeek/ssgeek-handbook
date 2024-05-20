@@ -1,7 +1,5 @@
 ---
-slug: blog/test-article
-title: 测试文章
-authors: [SSgeek]
+title: 测试文章2
 tags: [Test]
 ---
 

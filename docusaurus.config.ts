@@ -40,10 +40,13 @@ const config: Config = {
           editUrl:
               'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+        // docs: false,
         blog: {
           showReadingTime: true,
           routeBasePath: "/",
           path: "./blog",
+          blogSidebarCount: 8,
+          postsPerPage: 3,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -62,7 +65,7 @@ const config: Config = {
     navbar: {
       title: '山山仙人博客',
       logo: {
-        alt: 'SSgeek handbook',
+        alt: 'SSgeek Handbook',
         src: 'img/avatar.png',
       },
       items: [
@@ -71,6 +74,11 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+        },
+        {
+          to: '/docs/tutorial/intro',
+          label: 'Docs',
+          position: 'left',
         },
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -122,7 +130,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SSgeek. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
