@@ -1,0 +1,110 @@
+---
+sidebar_position: 2
+---
+
+# Vue 安装指南
+
+本文将指导您如何安装和设置 Vue.js 开发环境。
+
+## 使用 CDN
+
+最简单的方式是使用 CDN 引入 Vue：
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+
+## 使用 npm 安装
+
+推荐使用 npm 安装 Vue，这是最常用的方式：
+
+```bash
+# 安装最新版本
+npm install vue@next
+
+# 或使用 yarn
+yarn add vue@next
+```
+
+## 使用 Vue CLI
+
+Vue CLI 是 Vue.js 开发的标准工具：
+
+```bash
+# 安装 Vue CLI
+npm install -g @vue/cli
+
+# 创建新项目
+vue create my-project
+
+# 启动开发服务器
+cd my-project
+npm run serve
+```
+
+## 使用 Vite 创建项目
+
+Vite 是一个现代的前端构建工具，提供更快的开发体验：
+
+```bash
+# 使用 npm
+npm create vite@latest my-vue-app -- --template vue
+
+# 或使用 yarn
+yarn create vite my-vue-app --template vue
+
+# 安装依赖并启动
+cd my-vue-app
+npm install
+npm run dev
+```
+
+## 开发工具
+
+### VS Code 扩展
+
+推荐安装以下 VS Code 扩展：
+
+- Volar (Vue Language Features)
+- Vue VSCode Snippets
+- ESLint
+- Prettier
+
+### 浏览器扩展
+
+- Vue.js devtools
+
+## 验证安装
+
+创建一个简单的 Vue 应用来验证安装：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue 测试</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
+```
+
+## 下一步
+
+现在您已经安装好了 Vue，让我们开始学习 [Vue 基础知识](basics) 吧！ 

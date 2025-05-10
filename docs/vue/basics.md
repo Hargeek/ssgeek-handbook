@@ -1,0 +1,209 @@
+---
+sidebar_position: 3
+---
+
+# Vue 基础知识
+
+让我们开始学习 Vue 的基础知识。
+
+## 模板语法
+
+Vue 使用基于 HTML 的模板语法，允许我们声明式地将数据渲染到 DOM 中。
+
+### 文本插值
+
+```html
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<script>
+const { createApp } = Vue
+
+createApp({
+  data() {
+    return {
+      message: 'Hello Vue!'
+    }
+  }
+}).mount('#app')
+</script>
+```
+
+### 指令
+
+Vue 提供了许多内置指令：
+
+```html
+<!-- v-bind 绑定属性 -->
+<img v-bind:src="imageUrl">
+
+<!-- v-if 条件渲染 -->
+<p v-if="seen">现在你看到我了</p>
+
+<!-- v-for 列表渲染 -->
+<ul>
+  <li v-for="item in items" :key="item.id">
+    {{ item.text }}
+  </li>
+</ul>
+
+<!-- v-on 事件处理 -->
+<button v-on:click="reverseMessage">反转消息</button>
+```
+
+## 计算属性和侦听器
+
+### 计算属性
+
+```js
+const app = createApp({
+  data() {
+    return {
+      firstName: 'John',
+      lastName: 'Doe'
+    }
+  },
+  computed: {
+    fullName() {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
+```
+
+### 侦听器
+
+```js
+const app = createApp({
+  data() {
+    return {
+      question: '',
+      answer: ''
+    }
+  },
+  watch: {
+    question(newQuestion, oldQuestion) {
+      if (newQuestion.includes('?')) {
+        this.getAnswer()
+      }
+    }
+  },
+  methods: {
+    getAnswer() {
+      this.answer = '思考中...'
+      // 异步获取答案
+    }
+  }
+})
+```
+
+## 组件基础
+
+### 组件定义
+
+```js
+// 定义一个组件
+const app = createApp({})
+
+app.component('button-counter', {
+  data() {
+    return {
+      count: 0
+    }
+  },
+  template: `
+    <button @click="count++">
+      点击了 {{ count }} 次
+    </button>
+  `
+})
+```
+
+### 使用组件
+
+```html
+<div id="app">
+  <button-counter></button-counter>
+  <button-counter></button-counter>
+</div>
+```
+
+## 生命周期钩子
+
+```js
+const app = createApp({
+  data() {
+    return {
+      message: 'Hello Vue!'
+    }
+  },
+  created() {
+    console.log('组件已创建')
+  },
+  mounted() {
+    console.log('组件已挂载')
+  },
+  updated() {
+    console.log('组件已更新')
+  },
+  unmounted() {
+    console.log('组件已卸载')
+  }
+})
+```
+
+## 事件处理
+
+```html
+<div id="app">
+  <button @click="greet">问候</button>
+  <button @click="say('hi')">说 hi</button>
+  <button @click="warn('表单还未提交', $event)">
+    提交
+  </button>
+</div>
+
+<script>
+const app = createApp({
+  methods: {
+    greet(event) {
+      alert('Hello!')
+    },
+    say(message) {
+      alert(message)
+    },
+    warn(message, event) {
+      if (event) {
+        event.preventDefault()
+      }
+      alert(message)
+    }
+  }
+})
+</script>
+```
+
+## 表单输入绑定
+
+```html
+<div id="app">
+  <input v-model="message" placeholder="编辑我">
+  <p>消息是: {{ message }}</p>
+
+  <input type="checkbox" v-model="checked">
+  <p>复选框状态: {{ checked }}</p>
+
+  <select v-model="selected">
+    <option value="">请选择</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+  </select>
+  <p>选择的是: {{ selected }}</p>
+</div>
+```
+
+## 下一步
+
+这些是 Vue 的基础知识。在接下来的章节中，我们将深入学习更多高级主题。 

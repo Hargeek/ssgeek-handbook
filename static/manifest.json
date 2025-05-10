@@ -1,0 +1,16 @@
+{
+  "name": "山山仙人博客",
+  "short_name": "山山仙人",
+  "description": "山山仙人的个人博客",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#12affa",
+  "icons": [
+    {
+      "src": "/img/avatar.png",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+  ],
+} 

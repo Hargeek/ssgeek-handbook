@@ -37,25 +37,93 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         // docs: false,
         blog: {
           showReadingTime: true,
           routeBasePath: "/",
           path: "./blog",
-          blogSidebarCount: 8,
+          blogSidebarTitle: "最近更新",
+          blogSidebarCount: 0,
           postsPerPage: 3,
+          blogListComponent: '@theme/BlogListPage',
+          blogPostComponent: '@theme/BlogPostPage',
+          blogTagsListComponent: '@theme/BlogTagsListPage',
+          blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
+          blogArchiveComponent: '@theme/BlogArchivePage',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**', '/archive/**'],
+          filename: 'sitemap.xml',
+        },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-W3EV304GVH',
+      },
+    ],
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
+        disableInDev: false,
+      },
+    ],
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: false,
+        offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/avatar.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: '#12affa',
+          },
+        ],
+      },
+    ],
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['zh', 'en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+    [
+      'docusaurus-plugin-baidu-tongji',
+      {
+        token: '4b826a92a3dc151a74693fa1942d3167',
+      },
     ],
   ],
 
@@ -70,19 +138,41 @@ const config: Config = {
       },
       items: [
         {
+          type: 'dropdown',
+          label: 'Code',
+          position: 'right',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'python',
+              label: 'Python',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'golang',
+              label: 'Golang',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'vue',
+              label: 'Vue',
+            },
+          ],
+        },
+        {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          sidebarId: 'tools',
+          position: 'right',
+          label: 'Tools',
         },
         {
-          to: '/docs/tutorial/intro',
-          label: 'Docs',
-          position: 'left',
+          to: '/tags',
+          label: '标签',
+          position: 'right',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          to: '/archive',
+          label: '归档',
           position: 'right',
         },
       ],
@@ -91,41 +181,35 @@ const config: Config = {
       style: 'light',
       links: [
         {
-          title: 'Docs',
+          title: '更多',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/tutorial/intro',
+              label: '关于我',
+              to: '/about',
+            },
+            {
+              label: '友情链接',
+              to: '/friends',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '联系我',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Email',
+              href: 'mailto:ssgeek@hotmail.com',
             },
           ],
         },
         {
-          title: 'More',
+          title: '社区',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              html: '<a href="https://hub.docker.com/u/ssgeek" target="_blank" rel="noopener noreferrer"><img src="/img/icons/docker.svg" alt="Docker" width="24" height="24" /></a>',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              html: '<a href="https://github.com/hargeek" target="_blank" rel="noopener noreferrer"><img src="/img/icons/github.svg" alt="GitHub" width="24" height="24" /></a>',
             },
           ],
         },
@@ -133,8 +217,22 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} SSgeek. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.palenight,
+      darkTheme: prismThemes.palenight,
+    },
+    giscus: {
+      repo: 'Hargeek/ssgeek-handbook',
+      repoId: 'R_kgDOL0mh_A',
+      category: 'General',
+      categoryId: 'DIC_kwDOL0mh_M4Cp_ze',
+      mapping: 'pathname',
+      strict: '0',
+      reactionsEnabled: '1',
+      emitMetadata: '0',
+      inputPosition: 'bottom',
+      theme: 'preferred_color_scheme',
+      lang: 'zh-CN',
+      loading: 'lazy',
     },
   } satisfies Preset.ThemeConfig,
 };
