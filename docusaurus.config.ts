@@ -138,8 +138,24 @@ const config: Config = {
       },
       items: [
         {
+          to: '/tags',
+          label: '🏷️ 标签',
+          position: 'right',
+        },
+        {
+          to: '/archive',
+          label: '📚 归档',
+          position: 'right',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tools',
+          position: 'right',
+          label: '🛠️ Tools',
+        },
+        {
           type: 'dropdown',
-          label: 'Code',
+          label: '👨🏻‍💻Code',
           position: 'right',
           items: [
             {
@@ -159,22 +175,6 @@ const config: Config = {
             },
           ],
         },
-        {
-          type: 'docSidebar',
-          sidebarId: 'tools',
-          position: 'right',
-          label: 'Tools',
-        },
-        {
-          to: '/tags',
-          label: '标签',
-          position: 'right',
-        },
-        {
-          to: '/archive',
-          label: '归档',
-          position: 'right',
-        },
       ],
     },
     footer: {
@@ -186,6 +186,10 @@ const config: Config = {
             {
               label: '关于我',
               to: '/about',
+            },
+            {
+              label: '公众号',
+              to: '/gong-zhong-hao',
             },
             {
               label: '友情链接',
@@ -214,7 +218,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} SSgeek. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SSgeek's Blog | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">鄂ICP备18007156号-1</a>`,
     },
     prism: {
       theme: prismThemes.palenight,

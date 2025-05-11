@@ -1,5 +1,5 @@
 ---
-slug: blog/test1
+slug: 2018/01/01/test1
 title: 文章帖子的标题
 tags: [Test]
 ---
