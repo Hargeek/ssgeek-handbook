@@ -4,7 +4,7 @@ NPM = npm
 default: help
 
 # 开发环境运行
-.PHONY: start
+.PHONY: run
 start: ## 启动开发服务器
 	$(NPM) run start
 
