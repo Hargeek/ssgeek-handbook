@@ -5,7 +5,7 @@ default: help
 
 # 开发环境运行
 .PHONY: run
-start: ## 启动开发服务器
+run: ## 启动开发服务器
 	$(NPM) run start
 
 # 构建项目
