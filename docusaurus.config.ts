@@ -81,7 +81,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-W3EV304GVH',
+        trackingID: 'G-9Q435GTZPZ',
       },
     ],
     [
