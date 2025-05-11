@@ -36,3 +36,13 @@
   width: 35px;
   height: 35px;
 }
+
+/* 博客列表页面文章标题样式 */
+.blog-list-page article h2 a{
+  font-size: 0.8em;
+  color: #6ab17d !important;
+}
+
+.footer__copyright {
+  font-size: 0.9em;
+}
