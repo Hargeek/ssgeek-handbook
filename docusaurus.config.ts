@@ -230,7 +230,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} SSgeek's Blog | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">鄂ICP备18007156号-1</a>`,
+      copyright: `Copyright © ${new Date().getFullYear()} SSgeek's Blog<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">鄂ICP备18007156号-1</a>`,
     },
     prism: {
       theme: prismThemes.palenight,
