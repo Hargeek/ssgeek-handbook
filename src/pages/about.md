@@ -2,27 +2,35 @@
 title: 关于我
 ---
 
-# 关于我
+## 关于我
 
-## 个人简介
+Hello，😬 很高心在这里遇到你，我是 SSgeek（山山仙人）
 
-你好，我是山山仙人，一名全栈工程师。我热爱技术，喜欢分享，致力于将复杂的技术问题简单化。
+爱好骑行、电影、数码、航拍摄影和(不要)熬夜的一枚 `SRE` / `DevOps` 工程师
 
-## 技术栈
+目前工作于北京，供职于一家大型互联网公司，从事 `SRE` 相关工作
 
-- 前端：Vue.js, React, TypeScript
-- 后端：Python, Golang, Node.js
-- 数据库：MySQL, MongoDB, Redis
-- 其他：Docker, Kubernetes, Git
+我的平均年骑行里程达 `5000+` km
 
-## 联系方式
-
-- Email: ssgeek@hotmail.com
-- GitHub: [hargeek](https://github.com/hargeek)
-- Docker Hub: [ssgeek](https://hub.docker.com/u/ssgeek)
+学习和常用的语言是 `Golang`、`Python`
 
 ## 关于本站
 
-本站使用 [Docusaurus](https://docusaurus.io/) 构建，主要用于分享技术文章、学习笔记和个人思考。
+本站在 `2025` 年进行了重构，使用 [Docusaurus](https://docusaurus.io/) 构建，同时包含博客文章、技术手册以及一些日常记录
 
-如果你有任何问题或建议，欢迎通过以上方式联系我。 
+除了技术文章，也会不定期分享一些关于生活、爱好相关的杂文
+
+## 关注更新
+
+- [RSS](/rss.xml)
+- [公众号](/gong-zhong-hao)
+
+## 联系我
+
+- [Email](mailto:ssgeek@hotmail.com)
+
+<br/>
+
+有任何问题或建议，欢迎与我交流
+
+期待相遇 ~

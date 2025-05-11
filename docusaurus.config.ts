@@ -18,7 +18,7 @@ const config: Config = {
   organizationName: 'ssgeek', // Usually your GitHub org/user name.
   projectName: 'ssgeek-handbook', // Usually your repo name.
 
-  onBrokenLinks: 'warn', // 避免路径引用错误导致编译失败
+  onBrokenLinks: 'ignore', // 忽略断开的链接
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -52,6 +52,14 @@ const config: Config = {
           blogTagsListComponent: '@theme/BlogTagsListPage',
           blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
           blogArchiveComponent: '@theme/BlogArchivePage',
+          feedOptions: {
+            type: 'all',
+            title: '山山仙人博客',
+            description: '山山仙人的个人博客，分享技术、生活和爱好',
+            copyright: `Copyright © ${new Date().getFullYear()} SSgeek. Built with Docusaurus.`,
+            language: 'zh-Hans',
+            xslt: true,
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -198,8 +206,12 @@ const config: Config = {
           ],
         },
         {
-          title: '联系我',
+          title: '其他',
           items: [
+            {
+              label: 'RSS',
+              to: '/rss.xml',
+            },
             {
               label: 'Email',
               href: 'mailto:ssgeek@hotmail.com',
