@@ -22,3 +22,4 @@ yarn-error.log*
 .idea
 .obsidian/
 scripts/deploy.sh
+scripts/ads.txt
