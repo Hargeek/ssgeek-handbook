@@ -47,6 +47,7 @@ const config: Config = {
           blogSidebarTitle: "最近更新",
           blogSidebarCount: 0,
           postsPerPage: 3,
+          onUntruncatedBlogPosts: 'ignore',
           blogListComponent: '@theme/BlogListPage',
           blogPostComponent: '@theme/BlogPostPage',
           blogTagsListComponent: '@theme/BlogTagsListPage',
@@ -235,6 +236,14 @@ const config: Config = {
     prism: {
       theme: prismThemes.palenight,
       darkTheme: prismThemes.palenight,
+      additionalLanguages: [
+        'groovy',
+        'gradle',
+        'docker',
+        'sql',
+        'ini',
+        'nginx',
+      ],
     },
     giscus: {
       repo: 'Hargeek/ssgeek-handbook',
