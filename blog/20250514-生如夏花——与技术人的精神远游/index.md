@@ -1,11 +1,11 @@
 ---
-slug: blog/sheng-ru-xia-hua
-title: 生如夏花
+slug: blog/sheng-ru-xia-hua-yu-ji-shu-ren-de-jing-shen-yuan-you
+title: 生如夏花——与技术人的精神远游
 tags: [生活, 随笔]
 date: 2025-05-14
 ---
 
-———纪念左耳朵耗子，与技术人的精神远游
+———纪念左耳朵耗子
 <!--truncate-->
 
 > 早上通勤路上，看到有文章提到耗子叔，便立马想起2年前耗子叔离世时，自己拟下的本文标题，却迟迟未动笔。
