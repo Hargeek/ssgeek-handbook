@@ -29,12 +29,19 @@ const config: Config = {
     locales: ['zh-Hans'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -42,6 +49,7 @@ const config: Config = {
         // docs: false,
         blog: {
           showReadingTime: true,
+          showLastUpdateTime: true,
           routeBasePath: "/",
           path: "./blog",
           blogSidebarTitle: "最近更新",
@@ -141,6 +149,14 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
+    mermaid: {
+      theme: {light: 'default', dark: 'forest'},
+    },
     // Replace with your project's social card
     image: 'img/avatar.png',
     navbar: {

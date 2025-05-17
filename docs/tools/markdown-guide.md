@@ -192,6 +192,29 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+### Mermaid
+
+<Tabs>
+  <TabItem value="md" label="Markdown 语法">
+    ```markdown
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+  </TabItem>
+  <TabItem value="preview" label="效果预览">
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+  </TabItem>
+</Tabs>
+
 ## Docusaurus 特有语法
 
 ### 文章摘要
@@ -234,6 +257,10 @@ import TabItem from '@theme/TabItem';
     ```
   </TabItem>
   <TabItem value="preview" label="效果预览">
+    :::note 备注
+    这是一个备注框
+    :::
+
     :::tip 提示
     这是一个提示框
     :::
