@@ -99,7 +99,11 @@ const config: Config = {
       '@docusaurus/plugin-pwa',
       {
         debug: false,
-        offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
         pwaHead: [
           {
             tagName: 'link',
@@ -119,15 +123,15 @@ const config: Config = {
         ],
       },
     ],
-    [
-      '@easyops-cn/docusaurus-search-local',
-      {
-        hashed: true,
-        language: ['zh', 'en'],
-        highlightSearchTermsOnTargetPage: true,
-        explicitSearchResultPath: true,
-      },
-    ],
+    // [
+    //   '@easyops-cn/docusaurus-search-local',
+    //   {
+    //     hashed: true,
+    //     language: ['zh', 'en'],
+    //     highlightSearchTermsOnTargetPage: true,
+    //     explicitSearchResultPath: true,
+    //   },
+    // ],
     [
       'docusaurus-plugin-baidu-tongji',
       {
@@ -185,6 +189,11 @@ const config: Config = {
           ],
         },
       ],
+    },
+    algolia: {
+      apiKey: "837e7ac77be9c5036dff3fc19c9bb75e",
+      indexName: "ssgeek",
+      appId: "F3UGGDP6V8",
     },
     footer: {
       style: 'light',
