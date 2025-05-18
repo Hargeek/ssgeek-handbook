@@ -1,6 +1,6 @@
 ---
 sidebar_label: Go 安装指南
-title: " "
+title: Go 安装指南
 ---
 
 本文将指导您在不同操作系统上安装 Go。

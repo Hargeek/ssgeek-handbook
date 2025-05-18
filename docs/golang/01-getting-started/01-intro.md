@@ -1,6 +1,6 @@
 ---
 sidebar_label: Golang 手册介绍
-title: " "
+title: Golang手册介绍
 ---
 
 欢迎来到 Golang 手册！本手册将帮助您掌握 Go 编程语言的基础知识和进阶技巧。

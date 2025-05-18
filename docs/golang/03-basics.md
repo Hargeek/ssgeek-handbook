@@ -1,6 +1,6 @@
 ---
 sidebar_label: Go 基础知识
-title: " "
+title: Go 基础知识
 ---
 
 让我们开始学习 Go 的基础知识。
