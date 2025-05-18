@@ -18,7 +18,7 @@ const config: Config = {
   organizationName: 'ssgeek', // Usually your GitHub org/user name.
   projectName: 'ssgeek-handbook', // Usually your repo name.
 
-  onBrokenLinks: 'ignore', // 忽略断开的链接
+  onBrokenLinks: 'warn', // 警告
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -87,6 +87,7 @@ const config: Config = {
   ],
 
   plugins: [
+    'docusaurus-plugin-image-zoom',
     [
       '@docusaurus/plugin-google-gtag',
       {
@@ -157,6 +158,12 @@ const config: Config = {
     mermaid: {
       theme: {light: 'default', dark: 'forest'},
     },
+    docs: {
+      sidebar: {
+        hideable: true, // 允许隐藏整个侧边栏
+        autoCollapseCategories: true, // 展开一个类别时自动折叠其他类别
+      },
+    },
     // Replace with your project's social card
     image: 'img/avatar.png',
     navbar: {
@@ -165,6 +172,7 @@ const config: Config = {
         alt: 'SSgeek Handbook',
         src: 'img/avatar.png',
       },
+      hideOnScroll: true,
       items: [
         {
           to: '/tags',
@@ -262,12 +270,20 @@ const config: Config = {
       theme: prismThemes.palenight,
       darkTheme: prismThemes.palenight,
       additionalLanguages: [
+        'bash',
+        'java',
+        'python',
+        'php',
+        'go',
         'groovy',
         'gradle',
         'docker',
         'sql',
         'ini',
         'nginx',
+        'toml',
+        'protobuf',
+        'diff',
       ],
     },
     giscus: {
@@ -283,6 +299,16 @@ const config: Config = {
       theme: 'preferred_color_scheme',
       lang: 'zh-CN',
       loading: 'lazy',
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      config: {
+        margin:0,
+        background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+        }
+      }
     },
   } satisfies Preset.ThemeConfig,
 };
