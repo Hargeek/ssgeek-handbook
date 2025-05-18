@@ -150,11 +150,10 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="md" label="Markdown 语法">
-    ```markdown
     使用 `code` 标记行内代码
 
     使用三个反引号创建代码块：
-
+    ```markdown
     ~~~javascript
     const greeting = "Hello, World!";
     console.log(greeting);
@@ -169,6 +168,9 @@ import TabItem from '@theme/TabItem';
     ```javascript
     const greeting = "Hello, World!";
     console.log(greeting);
+    // highlight-start
+    console.log("This line is highlighted.");
+    // highlight-end
     ```
   </TabItem>
 </Tabs>
@@ -214,8 +216,6 @@ import TabItem from '@theme/TabItem';
     ```
   </TabItem>
 </Tabs>
-
-## Docusaurus 特有语法
 
 ### 文章摘要
 
