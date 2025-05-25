@@ -54,7 +54,7 @@ const config: Config = {
           path: "./blog",
           blogSidebarTitle: "最近更新",
           blogSidebarCount: 0,
-          postsPerPage: 3,
+          postsPerPage: 5,
           onUntruncatedBlogPosts: 'ignore',
           blogListComponent: '@theme/BlogListPage',
           blogPostComponent: '@theme/BlogPostPage',
