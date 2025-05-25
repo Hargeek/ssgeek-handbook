@@ -18,7 +18,7 @@ const config: Config = {
   organizationName: 'ssgeek', // Usually your GitHub org/user name.
   projectName: 'ssgeek-handbook', // Usually your repo name.
 
-  onBrokenLinks: 'warn', // 警告
+  onBrokenLinks: 'ignore', // 忽略
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
