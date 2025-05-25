@@ -1,6 +1,6 @@
 ---
 slug: blog/ack-ji-qun-terway-wang-luo-chang-jing-xia-de-vswitch-kuo-rong/
-title: ack集群Terway网络场景下的vSwitch扩容
+title: Ack集群Terway网络场景下的vSwitch扩容
 tags: [云原生,k8s,kubernetes,ack]
 date: 2021-12-28
 ---
