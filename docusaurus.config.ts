@@ -272,6 +272,7 @@ const config: Config = {
       additionalLanguages: [
         'bash',
         'java',
+        'json',
         'python',
         'php',
         'go',

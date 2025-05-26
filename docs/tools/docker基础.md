@@ -1,8 +1,7 @@
 ---
-sidebar_position: 3
+title: Docker 基础
+slug: docker-basic
 ---
-
-# Docker 基础
 
 Docker 是一个开源的容器化平台，用于开发、部署和运行应用程序。
 

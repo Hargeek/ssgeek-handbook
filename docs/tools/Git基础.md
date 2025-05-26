@@ -1,8 +1,7 @@
 ---
-sidebar_position: 2
+title: Git 基础
+slug: git-basic
 ---
-
-# Git 基础
 
 Git 是一个分布式版本控制系统，用于跟踪文件的变化，协调多人协作开发。
 

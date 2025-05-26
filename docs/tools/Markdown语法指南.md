@@ -1,11 +1,10 @@
 ---
-sidebar_position: 1
+title: Markdown 语法指南
+slug: markdown-guide
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-# Markdown 语法指南
 
 本文档通过左右对比的方式展示 Markdown 语法和实际效果。
 
@@ -239,6 +238,10 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="md" label="Markdown 语法">
     ```markdown
+    :::note[备注]
+    这是一个备注框
+    :::
+
     :::tip 提示
     这是一个提示框
     :::
