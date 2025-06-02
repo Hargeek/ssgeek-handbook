@@ -234,6 +234,10 @@ const config: Config = {
               to: '/gong-zhong-hao',
             },
             {
+              label: '开源项目',
+              to: '/project',
+            },
+            {
               label: '友情链接',
               to: '/friends',
             },
