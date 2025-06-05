@@ -319,6 +319,14 @@ const config: Config = {
       }
     },
   } satisfies Preset.ThemeConfig,
+
+  scripts: [
+    {
+      src: 'https://umami.ssgeek.com/script.js',
+      defer: true,
+      'data-website-id': '6b4cbd3c-7076-4871-b3ab-8793afa604e2',
+    },
+  ],
 };
 
 export default config;
