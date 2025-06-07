@@ -118,9 +118,7 @@ date: 2022-01-12
 
 本文就写（参考）到这里，后面围绕`Istio`做更多学习、实践的分享
 
-See you ~
-
-> 参考
-> https://istio.io/latest/zh/docs/concepts/what-is-istio/
-> https://www.infoq.cn/article/fA42rfjV*dYGAvRANFqE
-> https://mp.weixin.qq.com/s/csY8T02Ck8bnE3vVcZxVjQ
+参考
+>- https://istio.io/latest/zh/docs/concepts/what-is-istio/
+>- https://www.infoq.cn/article/fA42rfjV*dYGAvRANFqE
+>- https://mp.weixin.qq.com/s/csY8T02Ck8bnE3vVcZxVjQ
