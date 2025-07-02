@@ -13,6 +13,16 @@ function getRandomColor() {
 
 const projects = [
   {
+    name: 'go-api-template',
+    url: 'https://github.com/Hargeek/go-api-template',
+    description: '快速构建Golang API后端工程</br>项目脚手架',
+  },
+  {
+    name: 'go-ddd-template',
+    url: 'https://github.com/Hargeek/go-ddd-template',
+    description: 'Golang DDD(领域驱动设计)项目脚手架',
+  },
+  {
     name: 'gin-auto-redoc',
     url: 'https://github.com/Hargeek/gin-auto-redoc',
     description: '用于自动为已包含Swagger文档的Gin应用程序注册Redoc文档的Go包',
@@ -142,7 +152,7 @@ export default function Projects() {
                 className={styles.projectCard}
               >
                 <h2 className={styles.name}>{project.name}</h2>
-                <p className={styles.desc}>{project.description}</p>
+                <div className={styles.desc} dangerouslySetInnerHTML={{ __html: project.description }} />
                 <LanguageBar repo={repo} colorMap={colorMap} />
               </a>
             );
