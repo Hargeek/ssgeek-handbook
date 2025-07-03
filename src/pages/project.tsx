@@ -25,7 +25,12 @@ const projects = [
   {
     name: 'gin-auto-redoc',
     url: 'https://github.com/Hargeek/gin-auto-redoc',
-    description: '用于自动为已包含Swagger文档的Gin应用程序注册Redoc文档的Go包',
+    description: '为已集成 Swagger (OpenAPI) 文档的 Gin 应用程序自动注册 Redoc API接口文档的 Go 包',
+  },
+  {
+    name: 'gin-auto-stoplight-doc',
+    url: 'https://github.com/Hargeek/gin-auto-stoplight-doc',
+    description: '为已集成 Swagger (OpenAPI) 文档的 Gin 应用程序自动注册 Stoplight Elements API 接口文档的 Go 包',
   },
   {
     name: 'argocd-ctx-prompt',
