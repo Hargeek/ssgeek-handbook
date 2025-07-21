@@ -52,7 +52,7 @@ mac环境下执行
 ```bash
 # 先转换证书格式
 openssl x509 -in .certs/_cert.pem -outform PEM -out .certs/_pem.pem
-# 导入到系统证书
+# 导入到系统证书并添加可信
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ./.certs/_pem.pem
 ```
 
