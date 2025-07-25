@@ -1,6 +1,7 @@
 {
-  "label": "Build Tools",
+  "label": "Vue",
   "link": {
       "type": "generated-index"
-    }
+  },
+  "position": 1
 }

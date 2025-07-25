@@ -1,6 +1,6 @@
 ---
 title: 本地设置https
-slug: /vue/build-tools/vite/local-https-setting
+slug: /web/build-tools/vite/local-https-setting
 sidebar_position: 1
 ---
 

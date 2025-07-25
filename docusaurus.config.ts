@@ -207,8 +207,8 @@ const config: Config = {
             },
             {
               type: 'docSidebar',
-              sidebarId: 'vue',
-              label: 'Vue',
+              sidebarId: 'web',
+              label: 'Web',
             },
           ],
         },
